@@ -1,1 +1,7 @@
-document.body.innerHTML += "<pre>" + document.documentElement.innerHTML + "</pre>";
+fetch("/app/superSecretData.html", {
+  method: "POST"
+})
+  .then(res => res.text())
+  .then(data => {
+    document.body.innerHTML += "<pre>" + data + "</pre>";
+  });
