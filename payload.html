@@ -2,8 +2,8 @@
 <html>
 <body>
 <script>
-fetch('/generate_app_password', {
-  method: 'POST',
+fetch('/verify_app_password?username2=admin&app_password=admin', {
+  method: 'GET',
   credentials: 'include'
 })
   .then(res => res.text())
